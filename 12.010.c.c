@@ -1,15 +1,22 @@
 #include <stdio.h>
+
 int main(void)
 {
-   int x, y, z;
-   for (x = 0; x <= 100; x++)
-      for (y = 0; y <= 100; y++)
-         for (z = 0; z <= 100; z++)
+   int cock, hen, chicken;
+
+   for (cock = 0; cock <= 20; cock++)
+   {
+      for (hen = 0; hen <= 33; hen++)
+      {
+         for (chicken = 0; chicken <= 100; chicken++)
          {
-            if (5 * x + 3 * y + z / 3 == 100 && x + y + z == 100)
+
+            if (cock + hen + chicken == 100 && 5 * cock + 3 * hen + chicken / 3 == 100 && chicken % 3 == 0)
             {
-               printf("%d%d%d", x, y, z);
+               printf("cock : %d,hen : %d,chicken : %d\n", cock, hen, chicken);
             }
          }
+      }
+   }
    return 0;
 }
