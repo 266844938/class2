@@ -1,33 +1,26 @@
 #include <stdio.h>
-#include <math.h>
 int isPrime(int x)
 {
     int i;
-    for (i = 2; i <= sqrt(x); i++)
+    for (i = 2; i * i<= x; i++)
     {
         if (x % i == 0)
         {
-            break;
+            return 0;
         }
     }
-    if (i > sqrt(x))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
+    return 1;
 }
 int main(void)
 {
     int i, flag;
     for (i = 2; i <= 100; i++)
-    {   flag = isPrime(i);
-    if (flag == 1)
     {
-        printf("%5d", i);
+        flag = isPrime(i);
+        if (flag == 1)
+        {
+            printf("%5d", i);
+        }
     }
-}
-return 0;
+    return 0;
 }
