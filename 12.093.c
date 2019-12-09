@@ -26,7 +26,7 @@ int main(void)
     {   flag = isPrime(i);
     if (flag == 1)
     {
-        printf("%5d.", i);
+        printf("%5d", i);
     }
 }
 return 0;
