@@ -13,7 +13,7 @@ int isPrime (int x)
    return 1;
 
     }
-}
+
 
 int main(void)
 {
